@@ -28,7 +28,7 @@
     <div class="item item-input-inset">
       <label class="item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Buscar" ng-model="busca">
       </label>
     </div>
     <!-- End Search box-->
@@ -42,7 +42,7 @@
     ====================== -->
     <ul class="list gem-friend-list">
       <!-- Single Friend Item -->
-      <li class="item" ng-repeat="conta in contas">
+      <li class="item" ng-repeat="conta in contas | filter: busca">
         <!-- thumb image (round) -->
         <img src="img/gemionic/profile-image.jpg" alt="" class="gem-friend-list-profile-pic"> <!-- End Image - absolute left/top -->
 
